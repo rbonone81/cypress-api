@@ -73,7 +73,6 @@ describe('Automação API.', () => {
     cy.api({
       url: 'https://jsonplaceholder.typicode.com/posts/1',
       method: 'DELETE',
-      body : putBody
       }).then(response => {
         expect(response.status).to.eql(200)
         expect(response.headers['content-type']).to.include('application/json')
